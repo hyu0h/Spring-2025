@@ -1,0 +1,3 @@
+Datasets:
+CIFAR-10: 32x32 RGB images
+ImageNet-v2
