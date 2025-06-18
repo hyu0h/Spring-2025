@@ -1,0 +1,8 @@
+ip address add 10.1.1.1/24 dev eth0
+ip address add 20.0.0.9/30 dev eth1
+ip route add 30.1.1.0/24 via 20.0.0.10 dev eth1
+
+#tc qdisc add dev eth1 root tbf rate 1mbit burst 15k latency 25ms
+#tc qdisc add dev eth1 root netem delay 10ms
+#tc qdisc add dev eth1 root netem delay 100ms
+#tc qdisc add dev eth1 root netem delay 1s
